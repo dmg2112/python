@@ -1,25 +1,27 @@
-longi = input("introduzca el numero de elementos en la lista: ")
-while(not (longi.isdigit())):
-    longi = input("introduzca un numero positivo: ")
+Nums=[1,1,2,3,2,2,2,1,1,4,4,1]
+longitud = len(Nums)
+depur = []
 
-longi= int(longi)
-eltos = []
-for i in range(longi):
-    elto = input("introduzca un elemento: ")
-    if (elto.isdigit()):
-        elto = int(elto)
-    eltos.append(elto)
-
-print("con duplicados:")
-for elto in eltos:
-    print(elto)
-eltos = list(set(eltos))
-
-print("sin duplicados y ordenado")
-for elto in eltos:
-    print(elto)
-
+for n in range(longitud):
+    actual= Nums[n]
+    leng2= len(depur)-1
+    if(len(depur)>0):
+        ultimo = depur[-1]
+    else:
+        ultimo=0
+    if(longitud == 0):
+        depur.append(actual)
+    elif(longitud==(len(Nums)-1)):
+        if(ultimo!=actual):
+            depur.append(actual)
+    else:
+        
+        if(ultimo!=actual):
+            depur.append(actual)
     
+ 
+
+print(depur)
 
 
 
